@@ -1,0 +1,10 @@
+javac -classpath $HADOOP_INSTALL/share/hadoop/common/hadoop-common-3.3.6.jar:$HADOOP_INSTALL/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.3.6.jar MaxTemperature*.java
+
+jar -cvf MaxTemperatur.jar MaxTemperature*.class
+
+hadoop jar MaxTemperature.jar MaxTemperature input output
+
+cat output/*
+
+javac -classpath $HADOOP_INSTALL/share/hadoop/common/hadoop-common-3.3.6.jar:$HADOOP_INSTALL/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.3.6.jar MaxTemperature*.java
+
